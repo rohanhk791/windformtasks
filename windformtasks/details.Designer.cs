@@ -41,10 +41,10 @@ namespace windformtasks
             this.Col_phone_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Col_qualification = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.but_edit = new System.Windows.Forms.Button();
-            this.but_delete = new System.Windows.Forms.Button();
-            this.but_clear = new System.Windows.Forms.Button();
-            this.but_close = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_close = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,51 +128,51 @@ namespace windformtasks
             this.Col_qualification.HeaderText = "Qualification";
             this.Col_qualification.Name = "Col_qualification";
             // 
-            // but_edit
+            // btn_edit
             // 
-            this.but_edit.Location = new System.Drawing.Point(190, 322);
-            this.but_edit.Name = "but_edit";
-            this.but_edit.Size = new System.Drawing.Size(75, 23);
-            this.but_edit.TabIndex = 2;
-            this.but_edit.Text = "Edit";
-            this.but_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Location = new System.Drawing.Point(190, 322);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(75, 23);
+            this.btn_edit.TabIndex = 2;
+            this.btn_edit.Text = "Edit";
+            this.btn_edit.UseVisualStyleBackColor = true;
             // 
-            // but_delete
+            // btn_delete
             // 
-            this.but_delete.Location = new System.Drawing.Point(314, 322);
-            this.but_delete.Name = "but_delete";
-            this.but_delete.Size = new System.Drawing.Size(75, 23);
-            this.but_delete.TabIndex = 3;
-            this.but_delete.Text = "Delete";
-            this.but_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Location = new System.Drawing.Point(314, 322);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.TabIndex = 3;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
             // 
-            // but_clear
+            // btn_clear
             // 
-            this.but_clear.Location = new System.Drawing.Point(433, 322);
-            this.but_clear.Name = "but_clear";
-            this.but_clear.Size = new System.Drawing.Size(75, 23);
-            this.but_clear.TabIndex = 4;
-            this.but_clear.Text = "Clear";
-            this.but_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Location = new System.Drawing.Point(433, 322);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(75, 23);
+            this.btn_clear.TabIndex = 4;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
             // 
-            // but_close
+            // btn_close
             // 
-            this.but_close.Location = new System.Drawing.Point(551, 322);
-            this.but_close.Name = "but_close";
-            this.but_close.Size = new System.Drawing.Size(75, 23);
-            this.but_close.TabIndex = 5;
-            this.but_close.Text = "Close";
-            this.but_close.UseVisualStyleBackColor = true;
+            this.btn_close.Location = new System.Drawing.Point(551, 322);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(75, 23);
+            this.btn_close.TabIndex = 5;
+            this.btn_close.Text = "Close";
+            this.btn_close.UseVisualStyleBackColor = true;
             // 
             // details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 469);
-            this.Controls.Add(this.but_close);
-            this.Controls.Add(this.but_clear);
-            this.Controls.Add(this.but_delete);
-            this.Controls.Add(this.but_edit);
+            this.Controls.Add(this.btn_close);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "details";
@@ -197,9 +197,9 @@ namespace windformtasks
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_phone_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_address;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_qualification;
-        private System.Windows.Forms.Button but_edit;
-        private System.Windows.Forms.Button but_delete;
-        private System.Windows.Forms.Button but_clear;
-        private System.Windows.Forms.Button but_close;
+        private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Button btn_close;
     }
 }
