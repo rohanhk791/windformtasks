@@ -26,6 +26,7 @@ namespace windformtasks
         public string country { get; set; }
         public string address { get; set; }
         public string qualification { get; set; }
+        public int index { get; set; }
 
         public register()
         {
@@ -143,6 +144,21 @@ namespace windformtasks
         private void btn_edit_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+
+            foreach (DataGridViewRow item in this.datagrid.SelectedRows)
+            {
+                datagrid.Rows.RemoveAt(item.Index);
+            }
+
+        }
+
+        private void datagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //e.RowIndex(Index);
         }
     }
 

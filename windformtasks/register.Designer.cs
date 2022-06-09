@@ -460,6 +460,7 @@ namespace windformtasks
             this.btn_delete.TabIndex = 33;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // button2
             // 
@@ -478,6 +479,7 @@ namespace windformtasks
             this.datagrid.RowTemplate.Height = 25;
             this.datagrid.Size = new System.Drawing.Size(627, 150);
             this.datagrid.TabIndex = 36;
+            this.datagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_CellContentClick);
             // 
             // register
             // 
