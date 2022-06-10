@@ -72,10 +72,10 @@ namespace windformtasks
             this.Col_phone_no,
             this.Col_address,
             this.Col_qualification});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 75);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(881, 200);
+            this.dataGridView1.Size = new System.Drawing.Size(1038, 200);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -172,7 +172,7 @@ namespace windformtasks
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(905, 367);
+            this.ClientSize = new System.Drawing.Size(1062, 367);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_delete);

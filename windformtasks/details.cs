@@ -61,7 +61,19 @@ namespace windformtasks
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //display();
+            if (dataGridView1.Rows.Count > 0)
+            {
+                //txt_id.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                //txt_name.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                //num_age.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                //rad_male.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+                //com_city.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+                //com_state.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+                //com_country.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+                //txt_phone_no.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+                //txt_address.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+                //txt_qualification.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            }
         }
 
         private void btn_close_Click(object sender, EventArgs e)
