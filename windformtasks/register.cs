@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using System.Text.RegularExpressions.Regex Regex;
 
 namespace windformtasks
 {
@@ -14,19 +15,22 @@ namespace windformtasks
     public partial class register : Form
     {
         DataTable dt = new DataTable();
-        public int id { get; set; }
-        public int age { get; set; }
-        public long phone_no { get; set; }
+        public static int id { get; set; }
+        public static int age { get; set; }
+        public static long phone_no { get; set; }
 
-        public string name { get; set; }
-        public string gender { get; set; }
-        public string city { get; set; }
-        public string state { get; set; }
+        public static string name { get; set; }
+        public static string gender { get; set; }
+        public static string city { get; set; }
+        public static string state { get; set; }
 
-        public string country { get; set; }
-        public string address { get; set; }
-        public string qualification { get; set; }
-        public int index { get; set; }
+        public static string country { get; set; }
+        public static string address { get; set; }
+        public static string qualification { get; set; }
+        public static int index { get; set; }
+       public static string text1 { get; set; }
+
+
 
         public register()
         {
@@ -57,6 +61,7 @@ namespace windformtasks
             phone_no = Convert.ToInt64(txt_phone_no.Text);
             address = txt_address.Text;
              qualification = txt_qualification.Text;
+             text1 = txt_name.Text;
 
 
             if (rad_male.Checked)
@@ -67,41 +72,11 @@ namespace windformtasks
             {
                 gender = "female";
             }
-            display();
+           
+            details r = new details();
+            r.Show();
         }
-        public void display()
-        {
-
-            dt.Columns.Add("id");
-            dt.Columns.Add("Name");
-            dt.Columns.Add("Age");
-            dt.Columns.Add("Gender");
-            dt.Columns.Add("City");
-            dt.Columns.Add("State");
-            dt.Columns.Add("Country");
-            dt.Columns.Add("Phone_no");
-            dt.Columns.Add("Address");
-            dt.Columns.Add("Qualification");
-
-            DataRow dr = dt.NewRow();
-
-            dr[0] = id;
-            dr[1] = name;
-            dr[2] = age;
-            dr[3] = gender;
-            dr[4] = city;
-            dr[5] = state;
-            dr[6] = country;
-            dr[7] = phone_no;
-            dr[8] = address;
-            dr[9] = qualification;
-
-            dt.Rows.Add(dr);
-            datagrid.DataSource = dt;
-
-
-        }
-
+        
         private void com_city_SelectedIndexChanged(object sender, EventArgs e)
         {
           
@@ -149,16 +124,56 @@ namespace windformtasks
         private void btn_delete_Click(object sender, EventArgs e)
         {
 
-            foreach (DataGridViewRow item in this.datagrid.SelectedRows)
-            {
-                datagrid.Rows.RemoveAt(item.Index);
-            }
+            //foreach (DataGridViewRow item in this.datagrid.SelectedRows)
+            //{
+            //    datagrid.Rows.RemoveAt(item.Index);
+            //}
 
         }
 
         private void datagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //e.RowIndex(Index);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //this.datagrid.EditMode = DataGridViewEditMode.EditOnEnter;
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+
+            Application.Exit();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_view_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txt_phone_no_TextChanged(object sender, EventArgs e)
+        {
+
+            if (txt_phone_no.Text.StartsWith("0"))
+            {
+                MessageBox.Show("Dont start with Mobile Number 0 ");
+                return;
+            }
+            //Regex re = new Regex("^9[0-9]{9}");
+
+            //if (re.IsMatch(txt_phone_no.Text.Trim()) == false || txt_phone_no.Text.Length > 10)
+            //{
+            if (/*re.IsMatch(txt_phone_no.Text.Trim()) == false || */txt_phone_no.Text.Length > 10)
+            {
+                MessageBox.Show("Invalid Mobile Number!!");
+                txt_phone_no.Focus();
+            }
         }
     }
 
