@@ -197,14 +197,14 @@ namespace windformtasks
             // 
             this.com_city.AutoCompleteCustomSource.AddRange(new string[] {
             "Bagalkot",
-            "Ballari (Bellary)",
-            "Belagavi (Belgaum)",
-            "Bengaluru (Bangalore) Rural",
-            "Bengaluru (Bangalore) Urban",
+            "Ballari ",
+            "Belagavi ",
+            "Bengaluru  Rural",
+            "Bengaluru Urban",
             "Bidar",
             "Chamarajanagar",
             "Chikballapur",
-            "Chikkamagaluru (Chikmagalur)",
+            "Chikkamagaluru ",
             "Chitradurga",
             "Dakshina Kannada",
             "Davangere",
@@ -212,19 +212,19 @@ namespace windformtasks
             "Gadag",
             "Hassan",
             "Haveri",
-            "Kalaburagi (Gulbarga)",
+            "Kalaburagi ",
             "Kodagu",
             "Kolar",
             "Koppal",
             "Mandya",
-            "Mysuru (Mysore)",
+            "Mysuru ",
             "Raichur",
             "Ramanagara",
-            "Shivamogga (Shimoga)",
-            "Tumakuru (Tumkur)",
+            "Shivamogga ",
+            "Tumakuru",
             "Udupi",
-            "Uttara Kannada (Karwar)",
-            "Vijayapura (Bijapur)",
+            "Karwar",
+            "Vijayapura",
             "Yadgir"});
             this.com_city.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.com_city.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
@@ -352,7 +352,7 @@ namespace windformtasks
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(75, 23);
             this.btn_cancel.TabIndex = 20;
-            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.Text = "Close";
             this.btn_cancel.UseVisualStyleBackColor = true;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 

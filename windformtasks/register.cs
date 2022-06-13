@@ -74,7 +74,7 @@ namespace windformtasks
             }
            
             details r = new details();
-            r.Show();
+            //r.Show();
         }
         
         private void com_city_SelectedIndexChanged(object sender, EventArgs e)
@@ -154,7 +154,8 @@ namespace windformtasks
 
         private void btn_view_Click(object sender, EventArgs e)
         {
-           
+            details r = new details();
+            r.Show();  
         }
 
         private void txt_phone_no_TextChanged(object sender, EventArgs e)
@@ -162,7 +163,7 @@ namespace windformtasks
 
             if (txt_phone_no.Text.StartsWith("0"))
             {
-                MessageBox.Show("Dont start with Mobile Number 0 ");
+                MessageBox.Show("Dont start with Mobile Number 0");
                 return;
             }
             //Regex re = new Regex("^9[0-9]{9}");

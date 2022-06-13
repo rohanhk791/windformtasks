@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows;
 
 namespace windformtasks
 {
@@ -78,7 +79,7 @@ namespace windformtasks
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void details_Load(object sender, EventArgs e)
@@ -102,6 +103,16 @@ namespace windformtasks
         private void label2_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
