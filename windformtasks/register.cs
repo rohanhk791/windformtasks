@@ -73,7 +73,7 @@ namespace windformtasks
                 gender = "female";
             }
            
-            details r = new details();
+            //details r = new details();
             //r.Show();
         }
         

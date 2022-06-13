@@ -60,6 +60,7 @@ namespace windformtasks
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_id,
@@ -75,7 +76,7 @@ namespace windformtasks
             this.dataGridView1.Location = new System.Drawing.Point(12, 86);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(655, 200);
+            this.dataGridView1.Size = new System.Drawing.Size(655, 145);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -131,7 +132,7 @@ namespace windformtasks
             // 
             // btn_edit
             // 
-            this.btn_edit.Location = new System.Drawing.Point(111, 311);
+            this.btn_edit.Location = new System.Drawing.Point(111, 263);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(75, 23);
             this.btn_edit.TabIndex = 2;
@@ -141,7 +142,7 @@ namespace windformtasks
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(235, 311);
+            this.btn_delete.Location = new System.Drawing.Point(235, 263);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(75, 23);
             this.btn_delete.TabIndex = 3;
@@ -151,7 +152,7 @@ namespace windformtasks
             // 
             // btn_clear
             // 
-            this.btn_clear.Location = new System.Drawing.Point(354, 311);
+            this.btn_clear.Location = new System.Drawing.Point(354, 263);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(75, 23);
             this.btn_clear.TabIndex = 4;
@@ -161,7 +162,7 @@ namespace windformtasks
             // 
             // btn_close
             // 
-            this.btn_close.Location = new System.Drawing.Point(472, 311);
+            this.btn_close.Location = new System.Drawing.Point(472, 263);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(75, 23);
             this.btn_close.TabIndex = 5;
@@ -174,7 +175,7 @@ namespace windformtasks
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(679, 367);
+            this.ClientSize = new System.Drawing.Size(679, 314);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_delete);

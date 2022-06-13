@@ -85,7 +85,7 @@ namespace windformtasks
         private void details_Load(object sender, EventArgs e)
         {
             dataGridView1.Text = register.text1;
-           int id = register.id;
+            int id = register.id;
             string name = register.name;
             int age = register.age;
             string gender = register.gender;
