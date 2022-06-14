@@ -11,9 +11,11 @@ using System.Windows.Forms;
 
 namespace windformtasks
 {
-   
+
     public partial class register : Form
     {
+
+        //details det = new details();
         DataTable dt = new DataTable();
         public static int id { get; set; }
         public static int age { get; set; }
@@ -28,7 +30,7 @@ namespace windformtasks
         public static string address { get; set; }
         public static string qualification { get; set; }
         public static int index { get; set; }
-       public static string text1 { get; set; }
+        public static string text1 { get; set; }
 
 
 
@@ -39,7 +41,7 @@ namespace windformtasks
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
 
 
         }
@@ -50,18 +52,18 @@ namespace windformtasks
         }
 
         private void but_add_Click(object sender, EventArgs e)
-        { 
+        {
             id = int.Parse(txt_id.Text);
             name = txt_name.Text;
-             age = int.Parse(num_age.Text);
+            age = int.Parse(num_age.Text);
             gender = rad_male.Text;
-             city = com_city.Text;
-             state = com_state.Text;
+            city = com_city.Text;
+            state = com_state.Text;
             country = com_country.Text;
             phone_no = Convert.ToInt64(txt_phone_no.Text);
             address = txt_address.Text;
-             qualification = txt_qualification.Text;
-             text1 = txt_name.Text;
+            qualification = txt_qualification.Text;
+            text1 = txt_name.Text;
 
 
             if (rad_male.Checked)
@@ -72,14 +74,14 @@ namespace windformtasks
             {
                 gender = "female";
             }
-           
+
             //details r = new details();
             //r.Show();
         }
-        
+
         private void com_city_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         private void txt_id_TextChanged(object sender, EventArgs e)
@@ -96,15 +98,15 @@ namespace windformtasks
         {
             foreach (var clear in this.Controls)
             {
-                if (clear is TextBox)                
+                if (clear is TextBox)
                 {
                     ((TextBox)clear).Text = String.Empty;
-                  
+
                 }
 
                 if (clear is ComboBox)
                 {
-                    
+
                     ((ComboBox)clear).Text = String.Empty;
                 }
                 if (clear is NumericUpDown)
@@ -112,12 +114,24 @@ namespace windformtasks
 
                     ((NumericUpDown)clear).Text = String.Empty;
                 }
-               
+
             }
         }
 
         private void btn_edit_Click(object sender, EventArgs e)
-        {
+        {   
+           
+            //DataGridViewRow newdata = det.datagridview1.selectedrows[0];
+            //newdata.cells[0].value = txt_id.text;
+            //newdata.cells[1].value = txt_name.text;
+            //newdata.cells[2].value = num_age.text;
+            //newdata.cells[3].value = rad_male.text;
+            //newdata.cells[4].value = com_city.text;
+            //newdata.cells[5].value = com_state.text;
+            //newdata.cells[6].value = com_country.text;
+            //newdata.cells[7].value = txt_phone_no.text;
+            //newdata.cells[8].value = txt_address.text;
+            //newdata.cells[9].value = txt_qualification.text;
 
         }
 
@@ -133,12 +147,12 @@ namespace windformtasks
 
         private void datagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //e.RowIndex(Index);
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //this.datagrid.EditMode = DataGridViewEditMode.EditOnEnter;
+
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -155,7 +169,7 @@ namespace windformtasks
         private void btn_view_Click(object sender, EventArgs e)
         {
             details r = new details();
-            r.Show();  
+            r.Show();
         }
 
         private void txt_phone_no_TextChanged(object sender, EventArgs e)
@@ -176,8 +190,9 @@ namespace windformtasks
                 txt_phone_no.Focus();
             }
         }
+
+
+
+
     }
-
-
-    
 }

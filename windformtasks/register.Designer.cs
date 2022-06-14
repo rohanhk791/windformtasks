@@ -487,24 +487,24 @@ namespace windformtasks
         private System.Windows.Forms.Label lbl_country;
         private System.Windows.Forms.Label lbl_phone_no;
         private System.Windows.Forms.Label lbl_address;
-        private System.Windows.Forms.TextBox txt_id;
-        private System.Windows.Forms.TextBox txt_name;
-        private System.Windows.Forms.NumericUpDown num_age;
-        private System.Windows.Forms.ComboBox com_city;
-        private System.Windows.Forms.ComboBox com_state;
-        private System.Windows.Forms.ComboBox com_country;
-        private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_edit;
-        private System.Windows.Forms.Button btn_cancel;
-        private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_view;
-        private System.Windows.Forms.RadioButton rad_male;
-        private System.Windows.Forms.RadioButton rad_female;
-        private System.Windows.Forms.TextBox txt_address;
-        private System.Windows.Forms.TextBox txt_phone_no;
         private System.Windows.Forms.Label lbl_qualification;
-        private System.Windows.Forms.TextBox txt_qualification;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txt_id;
+        public System.Windows.Forms.TextBox txt_name;
+        public System.Windows.Forms.NumericUpDown num_age;
+        public System.Windows.Forms.ComboBox com_city;
+        public System.Windows.Forms.ComboBox com_state;
+        public System.Windows.Forms.ComboBox com_country;
+        public System.Windows.Forms.Button btn_add;
+        public System.Windows.Forms.Button btn_cancel;
+        public System.Windows.Forms.Button btn_clear;
+        public System.Windows.Forms.RadioButton rad_male;
+        public System.Windows.Forms.RadioButton rad_female;
+        public System.Windows.Forms.TextBox txt_address;
+        public System.Windows.Forms.TextBox txt_phone_no;
+        public System.Windows.Forms.TextBox txt_qualification;
     }
 }
 

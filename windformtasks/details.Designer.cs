@@ -196,11 +196,6 @@ namespace windformtasks
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btn_edit;
-        private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.Button btn_clear;
-        private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_age;
@@ -211,5 +206,10 @@ namespace windformtasks
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_phone_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_address;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_qualification;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.Button btn_edit;
+        public System.Windows.Forms.Button btn_delete;
+        public System.Windows.Forms.Button btn_clear;
+        public System.Windows.Forms.Button btn_close;
     }
 }

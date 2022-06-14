@@ -11,9 +11,16 @@ using System.Windows;
 
 namespace windformtasks
 {
+   
+
     public partial class details : Form
     {
-        DataTable dt = new DataTable();
+        
+        //DataTable dt = new DataTable();
+        register res = new register();
+        
+        //details det = new details();
+
         public details()
         {
             InitializeComponent();
@@ -56,25 +63,24 @@ namespace windformtasks
             //dr[9] = qualification;
 
             //dt.Rows.Add(dr);
-            dataGridView1.DataSource = dt;
+            //dataGridView1.DataSource = dt;
 
 
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Rows.Count > 0)
-            {
-                //txt_id.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-                //txt_name.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-                //num_age.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-                //rad_male.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-                //com_city.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-                //com_state.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-                //com_country.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-                //txt_phone_no.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-                //txt_address.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-                //txt_qualification.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-            }
+
+            res.txt_id.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            res.txt_name.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            res.num_age.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            res.rad_male.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            res.com_city.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            res.com_state.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            res.com_country.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            res.txt_phone_no.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+            res.txt_address.Text = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
+            res.txt_qualification.Text = dataGridView1.SelectedRows[0].Cells[9].Value.ToString();
+
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -84,8 +90,9 @@ namespace windformtasks
 
         private void details_Load(object sender, EventArgs e)
         {
+         
             dataGridView1.Text = register.text1;
-            int id = register.id;
+             int id = register.id;
             string name = register.name;
             int age = register.age;
             string gender = register.gender;
@@ -95,6 +102,9 @@ namespace windformtasks
             string address = register.address;
             long phone_no = register.phone_no;
             string qualification = register.qualification;
+
+         
+            
 
             dataGridView1.Rows.Add(id,name,age,gender,city,state,country,phone_no,address,qualification);
 
