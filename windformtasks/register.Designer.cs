@@ -39,7 +39,6 @@ namespace windformtasks
             this.lbl_country = new System.Windows.Forms.Label();
             this.lbl_phone_no = new System.Windows.Forms.Label();
             this.lbl_address = new System.Windows.Forms.Label();
-            this.txt_id = new System.Windows.Forms.TextBox();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.num_age = new System.Windows.Forms.NumericUpDown();
             this.com_city = new System.Windows.Forms.ComboBox();
@@ -56,7 +55,9 @@ namespace windformtasks
             this.txt_phone_no = new System.Windows.Forms.TextBox();
             this.lbl_qualification = new System.Windows.Forms.Label();
             this.txt_qualification = new System.Windows.Forms.TextBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.num_age)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +65,7 @@ namespace windformtasks
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(82, 9);
+            this.label1.Location = new System.Drawing.Point(304, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 26);
             this.label1.TabIndex = 0;
@@ -76,7 +77,7 @@ namespace windformtasks
             this.lbl_id.AutoSize = true;
             this.lbl_id.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_id.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_id.Location = new System.Drawing.Point(37, 60);
+            this.lbl_id.Location = new System.Drawing.Point(101, 93);
             this.lbl_id.Name = "lbl_id";
             this.lbl_id.Size = new System.Drawing.Size(32, 19);
             this.lbl_id.TabIndex = 1;
@@ -87,7 +88,7 @@ namespace windformtasks
             this.lbl_name.AutoSize = true;
             this.lbl_name.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_name.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_name.Location = new System.Drawing.Point(37, 91);
+            this.lbl_name.Location = new System.Drawing.Point(101, 124);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(58, 19);
             this.lbl_name.TabIndex = 2;
@@ -98,7 +99,7 @@ namespace windformtasks
             this.lbl_age.AutoSize = true;
             this.lbl_age.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_age.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_age.Location = new System.Drawing.Point(37, 129);
+            this.lbl_age.Location = new System.Drawing.Point(101, 162);
             this.lbl_age.Name = "lbl_age";
             this.lbl_age.Size = new System.Drawing.Size(45, 19);
             this.lbl_age.TabIndex = 3;
@@ -109,7 +110,7 @@ namespace windformtasks
             this.lbl_gender.AutoSize = true;
             this.lbl_gender.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_gender.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_gender.Location = new System.Drawing.Point(37, 167);
+            this.lbl_gender.Location = new System.Drawing.Point(101, 200);
             this.lbl_gender.Name = "lbl_gender";
             this.lbl_gender.Size = new System.Drawing.Size(68, 19);
             this.lbl_gender.TabIndex = 4;
@@ -120,7 +121,7 @@ namespace windformtasks
             this.lbl_city.AutoSize = true;
             this.lbl_city.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_city.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_city.Location = new System.Drawing.Point(37, 202);
+            this.lbl_city.Location = new System.Drawing.Point(101, 235);
             this.lbl_city.Name = "lbl_city";
             this.lbl_city.Size = new System.Drawing.Size(46, 19);
             this.lbl_city.TabIndex = 5;
@@ -132,7 +133,7 @@ namespace windformtasks
             this.lbl_state.AutoSize = true;
             this.lbl_state.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_state.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_state.Location = new System.Drawing.Point(38, 234);
+            this.lbl_state.Location = new System.Drawing.Point(102, 267);
             this.lbl_state.Name = "lbl_state";
             this.lbl_state.Size = new System.Drawing.Size(53, 19);
             this.lbl_state.TabIndex = 6;
@@ -143,7 +144,7 @@ namespace windformtasks
             this.lbl_country.AutoSize = true;
             this.lbl_country.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_country.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_country.Location = new System.Drawing.Point(38, 265);
+            this.lbl_country.Location = new System.Drawing.Point(418, 93);
             this.lbl_country.Name = "lbl_country";
             this.lbl_country.Size = new System.Drawing.Size(72, 19);
             this.lbl_country.TabIndex = 7;
@@ -154,7 +155,7 @@ namespace windformtasks
             this.lbl_phone_no.AutoSize = true;
             this.lbl_phone_no.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_phone_no.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_phone_no.Location = new System.Drawing.Point(38, 301);
+            this.lbl_phone_no.Location = new System.Drawing.Point(418, 129);
             this.lbl_phone_no.Name = "lbl_phone_no";
             this.lbl_phone_no.Size = new System.Drawing.Size(79, 19);
             this.lbl_phone_no.TabIndex = 8;
@@ -165,30 +166,22 @@ namespace windformtasks
             this.lbl_address.AutoSize = true;
             this.lbl_address.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_address.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_address.Location = new System.Drawing.Point(38, 339);
+            this.lbl_address.Location = new System.Drawing.Point(417, 202);
             this.lbl_address.Name = "lbl_address";
             this.lbl_address.Size = new System.Drawing.Size(73, 19);
             this.lbl_address.TabIndex = 9;
             this.lbl_address.Text = "Address :";
             // 
-            // txt_id
-            // 
-            this.txt_id.Location = new System.Drawing.Point(154, 60);
-            this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(119, 23);
-            this.txt_id.TabIndex = 10;
-            this.txt_id.TextChanged += new System.EventHandler(this.txt_id_TextChanged);
-            // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(154, 87);
+            this.txt_name.Location = new System.Drawing.Point(218, 120);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(119, 23);
+            this.txt_name.Size = new System.Drawing.Size(142, 23);
             this.txt_name.TabIndex = 11;
             // 
             // num_age
             // 
-            this.num_age.Location = new System.Drawing.Point(154, 125);
+            this.num_age.Location = new System.Drawing.Point(218, 158);
             this.num_age.Name = "num_age";
             this.num_age.Size = new System.Drawing.Size(50, 23);
             this.num_age.TabIndex = 12;
@@ -260,9 +253,9 @@ namespace windformtasks
             "Uttara Kannada (Karwar)",
             "Vijayapura (Bijapur)",
             "Yadgir"});
-            this.com_city.Location = new System.Drawing.Point(153, 198);
+            this.com_city.Location = new System.Drawing.Point(217, 231);
             this.com_city.Name = "com_city";
-            this.com_city.Size = new System.Drawing.Size(121, 23);
+            this.com_city.Size = new System.Drawing.Size(143, 23);
             this.com_city.TabIndex = 13;
             this.com_city.SelectedIndexChanged += new System.EventHandler(this.com_city_SelectedIndexChanged);
             // 
@@ -308,9 +301,9 @@ namespace windformtasks
             this.com_state.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.com_state.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.com_state.FormattingEnabled = true;
-            this.com_state.Location = new System.Drawing.Point(154, 230);
+            this.com_state.Location = new System.Drawing.Point(218, 263);
             this.com_state.Name = "com_state";
-            this.com_state.Size = new System.Drawing.Size(121, 23);
+            this.com_state.Size = new System.Drawing.Size(142, 23);
             this.com_state.TabIndex = 14;
             // 
             // com_country
@@ -320,35 +313,35 @@ namespace windformtasks
             this.com_country.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.com_country.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.com_country.FormattingEnabled = true;
-            this.com_country.Location = new System.Drawing.Point(154, 261);
+            this.com_country.Location = new System.Drawing.Point(534, 89);
             this.com_country.Name = "com_country";
-            this.com_country.Size = new System.Drawing.Size(121, 23);
+            this.com_country.Size = new System.Drawing.Size(142, 23);
             this.com_country.TabIndex = 15;
             // 
             // btn_add
             // 
             this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btn_add.Location = new System.Drawing.Point(129, 427);
+            this.btn_add.Location = new System.Drawing.Point(132, 326);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(75, 23);
             this.btn_add.TabIndex = 18;
-            this.btn_add.Text = "Add";
+            this.btn_add.Text = "Save";
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.but_add_Click);
             // 
             // btn_edit
             // 
-            this.btn_edit.Location = new System.Drawing.Point(184, 456);
+            this.btn_edit.Location = new System.Drawing.Point(225, 326);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(75, 23);
             this.btn_edit.TabIndex = 19;
-            this.btn_edit.Text = "Edit";
+            this.btn_edit.Text = "Update";
             this.btn_edit.UseVisualStyleBackColor = true;
             this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Location = new System.Drawing.Point(38, 427);
+            this.btn_cancel.Location = new System.Drawing.Point(517, 326);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(75, 23);
             this.btn_cancel.TabIndex = 20;
@@ -358,7 +351,7 @@ namespace windformtasks
             // 
             // btn_clear
             // 
-            this.btn_clear.Location = new System.Drawing.Point(223, 427);
+            this.btn_clear.Location = new System.Drawing.Point(422, 326);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(75, 23);
             this.btn_clear.TabIndex = 21;
@@ -368,7 +361,7 @@ namespace windformtasks
             // 
             // btn_view
             // 
-            this.btn_view.Location = new System.Drawing.Point(82, 456);
+            this.btn_view.Location = new System.Drawing.Point(326, 326);
             this.btn_view.Name = "btn_view";
             this.btn_view.Size = new System.Drawing.Size(75, 23);
             this.btn_view.TabIndex = 22;
@@ -379,7 +372,8 @@ namespace windformtasks
             // rad_male
             // 
             this.rad_male.AutoSize = true;
-            this.rad_male.Location = new System.Drawing.Point(153, 166);
+            this.rad_male.Checked = true;
+            this.rad_male.Location = new System.Drawing.Point(217, 199);
             this.rad_male.Name = "rad_male";
             this.rad_male.Size = new System.Drawing.Size(51, 19);
             this.rad_male.TabIndex = 23;
@@ -390,27 +384,26 @@ namespace windformtasks
             // rad_female
             // 
             this.rad_female.AutoSize = true;
-            this.rad_female.Location = new System.Drawing.Point(210, 166);
+            this.rad_female.Location = new System.Drawing.Point(274, 199);
             this.rad_female.Name = "rad_female";
             this.rad_female.Size = new System.Drawing.Size(63, 19);
             this.rad_female.TabIndex = 24;
-            this.rad_female.TabStop = true;
             this.rad_female.Text = "Female";
             this.rad_female.UseVisualStyleBackColor = true;
             // 
             // txt_address
             // 
-            this.txt_address.Location = new System.Drawing.Point(153, 339);
+            this.txt_address.Location = new System.Drawing.Point(533, 202);
             this.txt_address.Multiline = true;
             this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(122, 23);
+            this.txt_address.Size = new System.Drawing.Size(183, 87);
             this.txt_address.TabIndex = 25;
             // 
             // txt_phone_no
             // 
-            this.txt_phone_no.Location = new System.Drawing.Point(153, 297);
+            this.txt_phone_no.Location = new System.Drawing.Point(533, 125);
             this.txt_phone_no.Name = "txt_phone_no";
-            this.txt_phone_no.Size = new System.Drawing.Size(122, 23);
+            this.txt_phone_no.Size = new System.Drawing.Size(143, 23);
             this.txt_phone_no.TabIndex = 26;
             this.txt_phone_no.TextChanged += new System.EventHandler(this.txt_phone_no_TextChanged);
             // 
@@ -418,7 +411,7 @@ namespace windformtasks
             // 
             this.lbl_qualification.AutoSize = true;
             this.lbl_qualification.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_qualification.Location = new System.Drawing.Point(37, 372);
+            this.lbl_qualification.Location = new System.Drawing.Point(415, 164);
             this.lbl_qualification.Name = "lbl_qualification";
             this.lbl_qualification.Size = new System.Drawing.Size(103, 19);
             this.lbl_qualification.TabIndex = 27;
@@ -426,10 +419,17 @@ namespace windformtasks
             // 
             // txt_qualification
             // 
-            this.txt_qualification.Location = new System.Drawing.Point(153, 368);
+            this.txt_qualification.Location = new System.Drawing.Point(533, 164);
             this.txt_qualification.Name = "txt_qualification";
-            this.txt_qualification.Size = new System.Drawing.Size(122, 23);
+            this.txt_qualification.Size = new System.Drawing.Size(143, 23);
             this.txt_qualification.TabIndex = 28;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(218, 89);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(50, 23);
+            this.numericUpDown1.TabIndex = 29;
             // 
             // register
             // 
@@ -437,7 +437,8 @@ namespace windformtasks
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(313, 483);
+            this.ClientSize = new System.Drawing.Size(788, 432);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.txt_qualification);
             this.Controls.Add(this.lbl_qualification);
             this.Controls.Add(this.txt_phone_no);
@@ -454,7 +455,6 @@ namespace windformtasks
             this.Controls.Add(this.com_city);
             this.Controls.Add(this.num_age);
             this.Controls.Add(this.txt_name);
-            this.Controls.Add(this.txt_id);
             this.Controls.Add(this.lbl_address);
             this.Controls.Add(this.lbl_phone_no);
             this.Controls.Add(this.lbl_country);
@@ -470,6 +470,7 @@ namespace windformtasks
             this.Text = "Register page";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.num_age)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -491,7 +492,6 @@ namespace windformtasks
         private System.Windows.Forms.Button btn_view;
         private System.Windows.Forms.Label lbl_qualification;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.TextBox txt_id;
         public System.Windows.Forms.TextBox txt_name;
         public System.Windows.Forms.NumericUpDown num_age;
         public System.Windows.Forms.ComboBox com_city;
@@ -505,6 +505,7 @@ namespace windformtasks
         public System.Windows.Forms.TextBox txt_address;
         public System.Windows.Forms.TextBox txt_phone_no;
         public System.Windows.Forms.TextBox txt_qualification;
+        public System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 

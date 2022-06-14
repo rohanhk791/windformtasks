@@ -70,7 +70,7 @@ namespace windformtasks
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            res.txt_id.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            res.numericUpDown1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             res.txt_name.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             res.num_age.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             res.rad_male.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();

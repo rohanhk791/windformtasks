@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 //using System.Text.RegularExpressions.Regex Regex;
 
 namespace windformtasks
@@ -41,42 +42,75 @@ namespace windformtasks
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-
-
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void but_add_Click(object sender, EventArgs e)
+        public bool validate()
         {
-            id = int.Parse(txt_id.Text);
-            name = txt_name.Text;
-            age = int.Parse(num_age.Text);
-            gender = rad_male.Text;
-            city = com_city.Text;
-            state = com_state.Text;
-            country = com_country.Text;
-            phone_no = Convert.ToInt64(txt_phone_no.Text);
-            address = txt_address.Text;
-            qualification = txt_qualification.Text;
-            text1 = txt_name.Text;
-
-
-            if (rad_male.Checked)
+            try
             {
-                gender = "male";
+                if (string.IsNullOrEmpty(txt_name.Text)) { MessageBox.Show("Enter valid name"); return false; }
+                if (string.IsNullOrEmpty(rad_male.Text)) { MessageBox.Show("Enter valid gender"); return false; }
+                if (string.IsNullOrEmpty(txt_qualification.Text)) { MessageBox.Show("Enter valid qualification"); return false; }
+                if (string.IsNullOrEmpty(com_city.Text)) { MessageBox.Show("Enter valid city name"); return false; }
+                if (string.IsNullOrEmpty(com_state.Text)) { MessageBox.Show("Enter valid state name"); return false; }
+                if (string.IsNullOrEmpty(com_country.Text)) { MessageBox.Show("Enter valid country name"); return false; }
+                if (string.IsNullOrEmpty(txt_address.Text)) { MessageBox.Show("Enter valid address"); return false; }
+                return true;
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
+                return false;
+            }
+        }
+        public void save()
+        {
+            if (validate())
+            {
+                id = Convert.ToInt32(numericUpDown1.Value);
+                name = txt_name.Text;
+                age = int.Parse(num_age.Text);
+                gender = rad_male.Text;
+                if (!string.IsNullOrEmpty(txt_phone_no.Text)) phone_no = Convert.ToInt64(txt_phone_no.Text);
+                qualification = txt_qualification.Text;
+                city = com_city.Text;
+                state = com_state.Text;
+                country = com_country.Text;
+                address = txt_address.Text;
+                if (rad_male.Checked)
+                {
+                    gender = "male";
+                }
+                else
+                {
+                    gender = "female";
+                }
+                MessageBox.Show("Data Success");
             }
             else
             {
-                gender = "female";
+                MessageBox.Show("Data not saved");
             }
 
-            //details r = new details();
-            //r.Show();
+
+            //if (rad_male.Checked)
+            //{
+            //    gender = "male";
+            //}
+            //else
+            //{
+            //    gender = "female";
+            //}
+
+        }
+        private void but_add_Click(object sender, EventArgs e)
+        {
+            save();
+
         }
 
         private void com_city_SelectedIndexChanged(object sender, EventArgs e)
@@ -96,31 +130,34 @@ namespace windformtasks
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
-            foreach (var clear in this.Controls)
+            if (validate())
             {
-                if (clear is TextBox)
+                foreach (var clear in this.Controls)
                 {
-                    ((TextBox)clear).Text = String.Empty;
+                    if (clear is TextBox)
+                    {
+                        ((TextBox)clear).Text = String.Empty;
+
+                    }
+
+                    if (clear is ComboBox)
+                    {
+
+                        ((ComboBox)clear).Text = String.Empty;
+                    }
+                    if (clear is NumericUpDown)
+                    {
+
+                        ((NumericUpDown)clear).Text = String.Empty;
+                    }
 
                 }
-
-                if (clear is ComboBox)
-                {
-
-                    ((ComboBox)clear).Text = String.Empty;
-                }
-                if (clear is NumericUpDown)
-                {
-
-                    ((NumericUpDown)clear).Text = String.Empty;
-                }
-
             }
         }
 
         private void btn_edit_Click(object sender, EventArgs e)
-        {   
-           
+        {
+
             //DataGridViewRow newdata = det.datagridview1.selectedrows[0];
             //newdata.cells[0].value = txt_id.text;
             //newdata.cells[1].value = txt_name.text;
@@ -174,25 +211,26 @@ namespace windformtasks
 
         private void txt_phone_no_TextChanged(object sender, EventArgs e)
         {
-
-            if (txt_phone_no.Text.StartsWith("0"))
-            {
-                MessageBox.Show("Dont start with Mobile Number 0");
-                return;
-            }
-            //Regex re = new Regex("^9[0-9]{9}");
-
-            //if (re.IsMatch(txt_phone_no.Text.Trim()) == false || txt_phone_no.Text.Length > 10)
+            //if (validate())
             //{
-            if (/*re.IsMatch(txt_phone_no.Text.Trim()) == false || */txt_phone_no.Text.Length > 10)
-            {
-                MessageBox.Show("Invalid Mobile Number!!");
-                txt_phone_no.Focus();
-            }
+            //    long phone;
+            //    phone = Convert.ToInt64((phone_no));
+            //    string mregexp = @"(^[0-9]{10}$)";
+            //    Regex reg = new regex(mregexp);
+            //    if (reg.ismatch(phone))
+            //    {
+            //        return true;
+            //    }
+            //    else
+            //    {
+            //        return false;
+            //    }
+            //}
         }
 
 
 
 
+        }
     }
-}
+
