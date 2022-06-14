@@ -31,16 +31,6 @@ namespace windformtasks
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_city = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_state = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_country = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_phone_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col_qualification = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
@@ -62,73 +52,12 @@ namespace windformtasks
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.col_id,
-            this.Col_name,
-            this.Col_age,
-            this.Col_gender,
-            this.Col_city,
-            this.Col_state,
-            this.Col_country,
-            this.Col_phone_no,
-            this.Col_address,
-            this.Col_qualification});
             this.dataGridView1.Location = new System.Drawing.Point(12, 86);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(655, 145);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // col_id
-            // 
-            this.col_id.HeaderText = "ID";
-            this.col_id.Name = "col_id";
-            // 
-            // Col_name
-            // 
-            this.Col_name.HeaderText = "Name";
-            this.Col_name.Name = "Col_name";
-            // 
-            // Col_age
-            // 
-            this.Col_age.HeaderText = "Age";
-            this.Col_age.Name = "Col_age";
-            // 
-            // Col_gender
-            // 
-            this.Col_gender.HeaderText = "Gender";
-            this.Col_gender.Name = "Col_gender";
-            // 
-            // Col_city
-            // 
-            this.Col_city.HeaderText = "City";
-            this.Col_city.Name = "Col_city";
-            // 
-            // Col_state
-            // 
-            this.Col_state.HeaderText = "State";
-            this.Col_state.Name = "Col_state";
-            // 
-            // Col_country
-            // 
-            this.Col_country.HeaderText = "Country";
-            this.Col_country.Name = "Col_country";
-            // 
-            // Col_phone_no
-            // 
-            this.Col_phone_no.HeaderText = "Phone No";
-            this.Col_phone_no.Name = "Col_phone_no";
-            // 
-            // Col_address
-            // 
-            this.Col_address.HeaderText = "Address";
-            this.Col_address.Name = "Col_address";
-            // 
-            // Col_qualification
-            // 
-            this.Col_qualification.HeaderText = "Qualification";
-            this.Col_qualification.Name = "Col_qualification";
             // 
             // btn_edit
             // 
@@ -196,16 +125,6 @@ namespace windformtasks
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_age;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_city;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_state;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_country;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_phone_no;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_qualification;
         public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Button btn_edit;
         public System.Windows.Forms.Button btn_delete;

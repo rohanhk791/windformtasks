@@ -8,32 +8,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using windformtask2;
+
 //using System.Text.RegularExpressions.Regex Regex;
 
 namespace windformtasks
 {
+    public class RegistrationDetails
+    {
+        public int id { get; set; }
+        public int age { get; set; }
+        public  long phone_no { get; set; }
 
+        public  string name { get; set; }
+        public  string gender { get; set; }
+        public  string city { get; set; }
+        public  string state { get; set; }
+
+        public  string country { get; set; }
+        public  string address { get; set; }
+        public  string qualification { get; set; }
+        //public  int index { get; set; }
+       // public  string text1 { get; set; }
+    }
     public partial class register : Form
     {
-
+        List<RegistrationDetails> RegDetailsList = new List<RegistrationDetails>();
         //details det = new details();
-        DataTable dt = new DataTable();
-        public static int id { get; set; }
-        public static int age { get; set; }
-        public static long phone_no { get; set; }
-
-        public static string name { get; set; }
-        public static string gender { get; set; }
-        public static string city { get; set; }
-        public static string state { get; set; }
-
-        public static string country { get; set; }
-        public static string address { get; set; }
-        public static string qualification { get; set; }
-        public static int index { get; set; }
-        public static string text1 { get; set; }
-
-
+        //DataTable dt = new DataTable();
 
         public register()
         {
@@ -59,6 +61,8 @@ namespace windformtasks
                 if (string.IsNullOrEmpty(com_state.Text)) { MessageBox.Show("Enter valid state name"); return false; }
                 if (string.IsNullOrEmpty(com_country.Text)) { MessageBox.Show("Enter valid country name"); return false; }
                 if (string.IsNullOrEmpty(txt_address.Text)) { MessageBox.Show("Enter valid address"); return false; }
+
+                if (!validmobilenumber()) return false;
                 return true;
             }
             catch (Exception E)
@@ -69,44 +73,38 @@ namespace windformtasks
         }
         public void save()
         {
+            RegistrationDetails details;
             if (validate())
             {
-                id = Convert.ToInt32(numericUpDown1.Value);
-                name = txt_name.Text;
-                age = int.Parse(num_age.Text);
-                gender = rad_male.Text;
-                if (!string.IsNullOrEmpty(txt_phone_no.Text)) phone_no = Convert.ToInt64(txt_phone_no.Text);
-                qualification = txt_qualification.Text;
-                city = com_city.Text;
-                state = com_state.Text;
-                country = com_country.Text;
-                address = txt_address.Text;
-                if (rad_male.Checked)
-                {
-                    gender = "male";
-                }
-                else
-                {
-                    gender = "female";
-                }
+                details = new RegistrationDetails();
+                details.id = Convert.ToInt32(numericUpDown1.Value);
+                details.name = txt_name.Text;
+                details.age = int.Parse(num_age.Text);
+                details.gender = rad_male.Text;
+                    if (!string.IsNullOrEmpty(txt_phone_no.Text)) details.phone_no = Convert.ToInt64(txt_phone_no.Text);
+                details.qualification = txt_qualification.Text;
+                details.city = com_city.Text;
+                details.state = com_state.Text;
+                details.country = com_country.Text;
+                details.address = txt_address.Text;
+                    if (rad_male.Checked)
+                    {
+                    details.gender = "male";
+                    }
+                    else
+                    {
+                    details.gender = "female";
+                    }
+                
                 MessageBox.Show("Data Success");
+                RegDetailsList.Add(details);
+
             }
             else
             {
                 MessageBox.Show("Data not saved");
             }
-
-
-            //if (rad_male.Checked)
-            //{
-            //    gender = "male";
-            //}
-            //else
-            //{
-            //    gender = "female";
-            //}
-
-        }
+      }
         private void but_add_Click(object sender, EventArgs e)
         {
             save();
@@ -175,11 +173,6 @@ namespace windformtasks
         private void btn_delete_Click(object sender, EventArgs e)
         {
 
-            //foreach (DataGridViewRow item in this.datagrid.SelectedRows)
-            //{
-            //    datagrid.Rows.RemoveAt(item.Index);
-            //}
-
         }
 
         private void datagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -205,32 +198,37 @@ namespace windformtasks
 
         private void btn_view_Click(object sender, EventArgs e)
         {
-            details r = new details();
-            r.Show();
+            details det = new details(RegDetailsList);
+            det.Show();
+          
         }
-
+        public bool validmobilenumber()
+        {
+            try
+            {
+                Regex re = new Regex(@" ^[0 - 9]{ 10 }$");
+                if (re.IsMatch(txt_phone_no.Text) || txt_phone_no.Text.Length > 11 || txt_phone_no.Text.Length < 9)
+                {
+                    MessageBox.Show("Invalid  Mobile Number!!");
+                    txt_phone_no.Focus();
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
+                return false;
+            }
+        }
         private void txt_phone_no_TextChanged(object sender, EventArgs e)
         {
-            //if (validate())
-            //{
-            //    long phone;
-            //    phone = Convert.ToInt64((phone_no));
-            //    string mregexp = @"(^[0-9]{10}$)";
-            //    Regex reg = new regex(mregexp);
-            //    if (reg.ismatch(phone))
-            //    {
-            //        return true;
-            //    }
-            //    else
-            //    {
-            //        return false;
-            //    }
-            //}   //////
-        }
-
-
-
 
         }
+
     }
-
+    
+}
