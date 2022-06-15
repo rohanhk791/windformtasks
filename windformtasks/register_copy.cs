@@ -12,28 +12,10 @@ using windformtasks;
 
 namespace windformtasks
 {
-    //public class RegistrationDetail
-    //{
-    //    public int id { get; set; }
-    //    public int age { get; set; }
-    //    public long phone_no { get; set; }
-
-    //    public string name { get; set; }
-    //    public string gender { get; set; }
-    //    public string city { get; set; }
-    //    public string state { get; set; }
-
-    //    public string country { get; set; }
-    //    public string address { get; set; }
-    //    public string qualification { get; set; }
-    //    //public  int index { get; set; }
-    //    // public  string text1 { get; set; }
-    //}
     public partial class regester_copy : Form
     {
         RegistrationDetails _reg = new RegistrationDetails();
-            BindingList<RegistrationDetails> RegDetailsList = new BindingList<RegistrationDetails>();
-
+        BindingList<RegistrationDetails> RegDetailsList = new BindingList<RegistrationDetails>();
         public regester_copy()
         {
             InitializeComponent();
@@ -41,7 +23,6 @@ namespace windformtasks
         private void Form1_Load(object sender, EventArgs e)
         {
         }
-
 
         public bool validate()
         {
@@ -88,10 +69,8 @@ namespace windformtasks
                 {
                     details.gender = "female";
                 }
-
                 MessageBox.Show("Data Success");
                 RegDetailsList.Add(details);
-
             }
             else
             {
@@ -101,7 +80,6 @@ namespace windformtasks
         private void but_add_Click(object sender, EventArgs e)
         {
             save();
-
         }
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -117,30 +95,23 @@ namespace windformtasks
                     if (clear is TextBox)
                     {
                         ((TextBox)clear).Text = String.Empty;
-
                     }
-
                     if (clear is ComboBox)
                     {
-
                         ((ComboBox)clear).Text = String.Empty;
                     }
                     if (clear is NumericUpDown)
                     {
-
                         ((NumericUpDown)clear).Text = String.Empty;
                     }
-
                 }
             }
         }
-
         private void btn_edit_Click(object sender, EventArgs e)
         {
             try
             {
                 save();
-
                 details _list = new details(RegDetailsList, _reg.id);
                 int ind = _list._index;
                 _list.dataGridView1.Rows[ind].Cells["id"].Value = _reg.id;
@@ -160,7 +131,6 @@ namespace windformtasks
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void btn_delete_Click(object sender, EventArgs e)
         {
 
@@ -178,21 +148,17 @@ namespace windformtasks
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-
             Application.Exit();
         }
-
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void btn_view_Click(object sender, EventArgs e)
         {
             details det = new details(RegDetailsList,_reg.id);
             det.Show();
             this.Hide();
-
         }
         public bool validmobilenumber()
         {
