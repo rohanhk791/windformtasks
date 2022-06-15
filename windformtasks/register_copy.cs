@@ -168,6 +168,7 @@ namespace windformtasks
                 if (re.IsMatch(txt_phone_no.Text) || txt_phone_no.Text.Length > 11 || txt_phone_no.Text.Length < 9)
                 {
                     MessageBox.Show("Invalid  Mobile Number!!");
+                    MessageBox.Show("Enter valid mobile number!!");
                     txt_phone_no.Focus();
                     return false;
                 }
