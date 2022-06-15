@@ -16,14 +16,14 @@ namespace windformtasks
     public partial class details : Form
     {
         public int _index;
-        //regester_copy reg = new regester_copy();
+        regester_copy reg = new regester_copy();
         //DataTable dt = new DataTable();
         //register res = new register();
 
         //details det = new details();
 
-        List<RegistrationDetails> regList;
-        public details(List<RegistrationDetails> regDetailsList)
+        BindingList<RegistrationDetails> regList;
+        public details(BindingList<RegistrationDetails> regDetailsList, int id)
         {
             InitializeComponent();
             regList = regDetailsList;
@@ -31,13 +31,24 @@ namespace windformtasks
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            //dataGridView1.DataSource = null;
-            //dataGridView1.DataBind();
 
-            //foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
-            //{
-            //    dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
-            //}
+            try
+            {
+
+
+                RegistrationDetails r = new RegistrationDetails();
+                int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Index);
+                MessageBox.Show("hello" + id);
+                dataGridView1.Rows.Remove(dataGridView1.Rows[id]);                
+                dataGridView1.Refresh();
+
+
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
+            }
+
         }
 
         public void display()
@@ -90,7 +101,9 @@ namespace windformtasks
                 regForm.txt_phone_no.Text = edit.Cells["phone_no"].Value.ToString();
                 regForm.txt_address.Text = edit.Cells["address"].Value.ToString();
                 regForm.txt_qualification.Text = edit.Cells["qualification"].Value.ToString();
+                //this.Hide();
                 regForm.Show();
+                
             }
 
             catch (Exception ex)
@@ -100,6 +113,11 @@ namespace windformtasks
         }
 
         private void btn_clear_Click(object sender, EventArgs e)
+        {
+            reg.save();
+        }
+
+        private void dataGridView1_BindingContextChanged(object sender, EventArgs e)
         {
 
         }

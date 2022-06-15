@@ -12,27 +12,27 @@ using windformtasks;
 
 namespace windformtasks
 {
-    public class RegistrationDetail
-    {
-        public int id { get; set; }
-        public int age { get; set; }
-        public long phone_no { get; set; }
+    //public class RegistrationDetail
+    //{
+    //    public int id { get; set; }
+    //    public int age { get; set; }
+    //    public long phone_no { get; set; }
 
-        public string name { get; set; }
-        public string gender { get; set; }
-        public string city { get; set; }
-        public string state { get; set; }
+    //    public string name { get; set; }
+    //    public string gender { get; set; }
+    //    public string city { get; set; }
+    //    public string state { get; set; }
 
-        public string country { get; set; }
-        public string address { get; set; }
-        public string qualification { get; set; }
-        //public  int index { get; set; }
-        // public  string text1 { get; set; }
-    }
+    //    public string country { get; set; }
+    //    public string address { get; set; }
+    //    public string qualification { get; set; }
+    //    //public  int index { get; set; }
+    //    // public  string text1 { get; set; }
+    //}
     public partial class regester_copy : Form
     {
         RegistrationDetails _reg = new RegistrationDetails();
-        List<RegistrationDetails> RegDetailsList = new List<RegistrationDetails>();
+            BindingList<RegistrationDetails> RegDetailsList = new BindingList<RegistrationDetails>();
 
         public regester_copy()
         {
@@ -140,8 +140,8 @@ namespace windformtasks
             try
             {
                 save();
-            
-                details _list = new details(RegDetailsList);
+
+                details _list = new details(RegDetailsList, _reg.id);
                 int ind = _list._index;
                 _list.dataGridView1.Rows[ind].Cells["id"].Value = _reg.id;
                 _list.dataGridView1.Rows[ind].Cells["name"].Value = _reg.name;
@@ -153,6 +153,7 @@ namespace windformtasks
                 _list.dataGridView1.Rows[ind].Cells["country"].Value = _reg.country;
                 _list.dataGridView1.Rows[ind].Cells["phone_no"].Value = _reg.phone_no;
                 _list.dataGridView1.Rows[ind].Cells["address"].Value = _reg.address;
+                //this.Hide();
             }
             catch (Exception ex)
             {
@@ -188,8 +189,9 @@ namespace windformtasks
 
         private void btn_view_Click(object sender, EventArgs e)
         {
-            details det = new details(RegDetailsList);
+            details det = new details(RegDetailsList,_reg.id);
             det.Show();
+            this.Hide();
 
         }
         public bool validmobilenumber()

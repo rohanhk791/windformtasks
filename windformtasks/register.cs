@@ -191,8 +191,8 @@ namespace windformtasks
 
         private void btn_view_Click(object sender, EventArgs e)
         {
-            details det = new details(RegDetailsList);
-            det.Show();
+            //details det = new details(RegDetailsList);
+            //det.Show();
 
         }
         public bool validmobilenumber()
