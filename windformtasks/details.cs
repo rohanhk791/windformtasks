@@ -27,7 +27,10 @@ namespace windformtasks
             {
                 RegistrationDetails r = new RegistrationDetails();
                 int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Index);
-                MessageBox.Show("successfully deleted");
+                string message = "successfully deleted";
+                string title = "Congrats";
+                MessageBox.Show(message, title);
+                //MessageBox.Show("successfully deleted");
                 dataGridView1.Rows.Remove(dataGridView1.Rows[id]);                
                 dataGridView1.Refresh();
             }

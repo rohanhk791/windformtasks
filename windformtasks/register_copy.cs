@@ -28,21 +28,21 @@ namespace windformtasks
         {
             try
             {
-                if (string.IsNullOrEmpty(txt_name.Text)) { MessageBox.Show("Enter valid name"); return false; }
-                if (string.IsNullOrEmpty(rad_male.Text)) { MessageBox.Show("Enter valid gender"); return false; }
-                if (string.IsNullOrEmpty(txt_qualification.Text)) { MessageBox.Show("Enter valid qualification"); return false; }
-                if (string.IsNullOrEmpty(com_city.Text)) { MessageBox.Show("Enter valid city name"); return false; }
-                if (string.IsNullOrEmpty(com_state.Text)) { MessageBox.Show("Enter valid state name"); return false; }
-                if (string.IsNullOrEmpty(com_country.Text)) { MessageBox.Show("Enter valid country name"); return false; }
-                if (string.IsNullOrEmpty(txt_address.Text)) { MessageBox.Show("Enter valid address"); return false; }
+                if (string.IsNullOrEmpty(txt_name.Text)) { string message = "Enter valid name";  string title = "Warning";  MessageBox.Show(message,title); return false; }
+                if (string.IsNullOrEmpty(rad_male.Text)) { string message = "Enter valid gender"; string title = "Warning"; MessageBox.Show(message, title); }
+                if (string.IsNullOrEmpty(txt_qualification.Text)) { string message = "Enter valid qualification"; string title = "Warning"; MessageBox.Show(message, title); return false; }
+                if (string.IsNullOrEmpty(com_city.Text)) { string message = "Enter valid city"; string title = "Warning"; MessageBox.Show(message, title); return false; }
+                if (string.IsNullOrEmpty(com_state.Text)) { string message = "Enter valid state"; string title = "Warning"; MessageBox.Show(message, title); return false; }
+                if (string.IsNullOrEmpty(com_country.Text)) { string message = "Enter valid country"; string title = "Warning"; MessageBox.Show(message, title); return false; }
+                if (string.IsNullOrEmpty(txt_address.Text)) { string message = "Enter valid address"; string title = "Warning"; MessageBox.Show(message, title); return false; }
 
-                if (!validmobilenumber())  return false; 
+                if (!validmobilenumber()) return false;
                 return true;
             }
             catch (Exception E)
-            {
+            {   
                 MessageBox.Show(E.Message);
-                return false;
+                return false;          
             }
         }
         public void save()
@@ -69,12 +69,18 @@ namespace windformtasks
                 {
                     details.gender = "female";
                 }
-                MessageBox.Show("Data Success");
+                string message = "Data Successfully saved"; 
+                string title = "Congrats"; 
+                MessageBox.Show(message, title);
+                //MessageBox.Show("Data Success");
                 RegDetailsList.Add(details);
             }
             else
             {
-                MessageBox.Show("Data not saved");
+                string message = "Data unSuccessfully";
+                string title = "Warning";
+                MessageBox.Show(message, title);
+                //MessageBox.Show("Data not saved");
             }
         }
         private void but_add_Click(object sender, EventArgs e)
@@ -167,8 +173,11 @@ namespace windformtasks
                 Regex re = new Regex(@" ^[0 - 9]{ 10 }$");
                 if (re.IsMatch(txt_phone_no.Text) || txt_phone_no.Text.Length > 11 || txt_phone_no.Text.Length < 9)
                 {
-                    MessageBox.Show("Invalid  Mobile Number!!");
-                    MessageBox.Show("Enter valid mobile number!!");
+                    string message = "Invalid  Mobile Number !! Enter valid number!!";                   
+                    string title = "Warning";
+                    MessageBox.Show(message, title);
+                    //MessageBox.Show("Invalid  Mobile Number!!");
+                    //MessageBox.Show("Enter valid mobile number!!");
                     txt_phone_no.Focus();
                     return false;
                 }
