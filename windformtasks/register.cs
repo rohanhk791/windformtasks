@@ -1,14 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Text.RegularExpressions;
-using windformtask2;
+using System.Windows.Forms;
 
 //using System.Text.RegularExpressions.Regex Regex;
 
@@ -18,18 +11,18 @@ namespace windformtasks
     {
         public int id { get; set; }
         public int age { get; set; }
-        public  long phone_no { get; set; }
+        public long phone_no { get; set; }
 
-        public  string name { get; set; }
-        public  string gender { get; set; }
-        public  string city { get; set; }
-        public  string state { get; set; }
+        public string name { get; set; }
+        public string gender { get; set; }
+        public string city { get; set; }
+        public string state { get; set; }
 
-        public  string country { get; set; }
-        public  string address { get; set; }
-        public  string qualification { get; set; }
+        public string country { get; set; }
+        public string address { get; set; }
+        public string qualification { get; set; }
         //public  int index { get; set; }
-       // public  string text1 { get; set; }
+        // public  string text1 { get; set; }
     }
     public partial class register : Form
     {
@@ -81,21 +74,21 @@ namespace windformtasks
                 details.name = txt_name.Text;
                 details.age = int.Parse(num_age.Text);
                 details.gender = rad_male.Text;
-                    if (!string.IsNullOrEmpty(txt_phone_no.Text)) details.phone_no = Convert.ToInt64(txt_phone_no.Text);
+                if (!string.IsNullOrEmpty(txt_phone_no.Text)) details.phone_no = Convert.ToInt64(txt_phone_no.Text);
                 details.qualification = txt_qualification.Text;
                 details.city = com_city.Text;
                 details.state = com_state.Text;
                 details.country = com_country.Text;
                 details.address = txt_address.Text;
-                    if (rad_male.Checked)
-                    {
+                if (rad_male.Checked)
+                {
                     details.gender = "male";
-                    }
-                    else
-                    {
+                }
+                else
+                {
                     details.gender = "female";
-                    }
-                
+                }
+
                 MessageBox.Show("Data Success");
                 RegDetailsList.Add(details);
 
@@ -104,7 +97,7 @@ namespace windformtasks
             {
                 MessageBox.Show("Data not saved");
             }
-      }
+        }
         private void but_add_Click(object sender, EventArgs e)
         {
             save();
@@ -200,7 +193,7 @@ namespace windformtasks
         {
             details det = new details(RegDetailsList);
             det.Show();
-          
+
         }
         public bool validmobilenumber()
         {
@@ -230,5 +223,5 @@ namespace windformtasks
         }
 
     }
-    
+
 }
