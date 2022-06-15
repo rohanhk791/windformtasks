@@ -301,6 +301,43 @@ namespace windformtasks
             this.com_state.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.com_state.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.com_state.FormattingEnabled = true;
+            this.com_state.Items.AddRange(new object[] {
+            "Andhra Pradesh",
+            "Arunachal Pradesh",
+            "Assam",
+            "Bihar",
+            "Chhattisgarh",
+            "Goa",
+            "Gujarat",
+            "Haryana",
+            "Himachal Pradesh",
+            "Jammu and Kashmir",
+            "Jharkhand",
+            "Karnataka",
+            "Kerala",
+            "Madhya Pradesh",
+            "Maharashtra",
+            "Manipur",
+            "Meghalaya",
+            "Mizoram",
+            "Nagaland",
+            "Odisha",
+            "Punjab",
+            "Rajasthan",
+            "Sikkim",
+            "Tamil Nadu",
+            "Telangana",
+            "Tripura",
+            "Uttarakhand",
+            "Uttar Pradesh",
+            "West Bengal",
+            "Andaman and Nicobar Islands",
+            "Chandigarh",
+            "Dadra and Nagar Haveli",
+            "Daman and Diu",
+            "Delhi",
+            "Lakshadweep",
+            "Puducherry"});
             this.com_state.Location = new System.Drawing.Point(218, 263);
             this.com_state.Name = "com_state";
             this.com_state.Size = new System.Drawing.Size(142, 23);
@@ -313,6 +350,8 @@ namespace windformtasks
             this.com_country.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.com_country.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.com_country.FormattingEnabled = true;
+            this.com_country.Items.AddRange(new object[] {
+            "India"});
             this.com_country.Location = new System.Drawing.Point(534, 89);
             this.com_country.Name = "com_country";
             this.com_country.Size = new System.Drawing.Size(142, 23);
