@@ -1,5 +1,4 @@
-﻿
-namespace windformtasks
+﻿namespace windformtasks
 {
     partial class details
     {

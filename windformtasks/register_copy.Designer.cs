@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace windformtask2
+namespace windformtasks
 {
     partial class regester_copy
     {

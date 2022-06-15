@@ -11,11 +11,11 @@ using System.Windows;
 
 namespace windformtasks
 {
-   
+
 
     public partial class details : Form
     {
-        public string _index;
+        public int _index;
         //regester_copy reg = new regester_copy();
         //DataTable dt = new DataTable();
         //register res = new register();
@@ -31,11 +31,13 @@ namespace windformtasks
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
+            //dataGridView1.DataSource = null;
+            //dataGridView1.DataBind();
 
-            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
-            {
-                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
-            }
+            //foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+            //{
+            //    dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+            //}
         }
 
         public void display()
@@ -56,9 +58,9 @@ namespace windformtasks
         {
             try
             {
-               //dataGridView1.Rows.Add(regList);
+                //dataGridView1.Rows.Add(regList);
                 dataGridView1.DataSource = regList;
-               
+
             }
             catch (Exception E)
             {
@@ -69,29 +71,26 @@ namespace windformtasks
 
         private void label2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
             try
             {
-                //regester_copy regForm = new regester_copy(this);
-                //_index = dataGridView1.CurrentCell.RowIndex;
-                //DataGridViewRow edit = dataGridView1.Rows[_index];
-                //regForm.txt_id.Text = edit.Cells["Id"].Value.ToString();
-                //regForm.txt_name.Text = edit.Cells["EName"].Value.ToString();
-                ////regForm.date_DateTime.Value = Convert.ToDateTime(edit.Cells["Date"].Value);
-                ////regForm.COMB_Age.Text = edit.Cells[1].Value.ToString();
-                //regForm.num_age.Value = Convert.ToInt32(edit.Cells["Age"].Value);
-                //getGender(edit.Cells["Gender"].Value.ToString(), regForm);
-                //regForm.txt_aualification.Text = edit.Cells["Qualification"].Value.ToString();
-                //regForm.comb_state.Text = edit.Cells["State"].Value.ToString();
-                //regForm.comb_city.Text = edit.Cells["City"].Value.ToString();
-                //regForm.comb_country.Text = edit.Cells["Country"].Value.ToString();
-                //regForm.txt_phone_no.Text = edit.Cells["Phone"].Value.ToString();
-                //regForm.txt_Address.Text = edit.Cells["Address"].Value.ToString();
-                //regForm.Show();
+                regester_copy regForm = new regester_copy();
+                _index = dataGridView1.CurrentCell.RowIndex;
+                DataGridViewRow edit = dataGridView1.Rows[_index];
+                regForm.numericUpDown1.Text = edit.Cells["id"].Value.ToString();
+                regForm.txt_name.Text = edit.Cells["Name"].Value.ToString();                            
+                regForm.num_age.Value = Convert.ToInt32(edit.Cells["Age"].Value);               
+                regForm.com_state.Text = edit.Cells["State"].Value.ToString();
+                regForm.com_city.Text = edit.Cells["City"].Value.ToString();
+                regForm.com_country.Text = edit.Cells["Country"].Value.ToString();
+                regForm.txt_phone_no.Text = edit.Cells["Phone"].Value.ToString();
+                regForm.txt_address.Text = edit.Cells["Address"].Value.ToString();
+                regForm.txt_qualification.Text = edit.Cells["Qualification"].Value.ToString();
+                regForm.Show();
             }
 
             catch (Exception ex)
