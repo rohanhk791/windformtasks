@@ -82,14 +82,14 @@ namespace windformtasks
                 _index = dataGridView1.CurrentCell.RowIndex;
                 DataGridViewRow edit = dataGridView1.Rows[_index];
                 regForm.numericUpDown1.Text = edit.Cells["id"].Value.ToString();
-                regForm.txt_name.Text = edit.Cells["Name"].Value.ToString();                            
-                regForm.num_age.Value = Convert.ToInt32(edit.Cells["Age"].Value);               
-                regForm.com_state.Text = edit.Cells["State"].Value.ToString();
-                regForm.com_city.Text = edit.Cells["City"].Value.ToString();
-                regForm.com_country.Text = edit.Cells["Country"].Value.ToString();
-                regForm.txt_phone_no.Text = edit.Cells["Phone"].Value.ToString();
-                regForm.txt_address.Text = edit.Cells["Address"].Value.ToString();
-                regForm.txt_qualification.Text = edit.Cells["Qualification"].Value.ToString();
+                regForm.txt_name.Text = edit.Cells["name"].Value.ToString();                            
+                regForm.num_age.Value = Convert.ToInt32(edit.Cells["age"].Value);               
+                regForm.com_state.Text = edit.Cells["state"].Value.ToString();
+                regForm.com_city.Text = edit.Cells["city"].Value.ToString();
+                regForm.com_country.Text = edit.Cells["country"].Value.ToString();
+                regForm.txt_phone_no.Text = edit.Cells["phone_no"].Value.ToString();
+                regForm.txt_address.Text = edit.Cells["address"].Value.ToString();
+                regForm.txt_qualification.Text = edit.Cells["qualification"].Value.ToString();
                 regForm.Show();
             }
 
