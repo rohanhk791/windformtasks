@@ -72,7 +72,6 @@ namespace windformtasks
                 string message = "Data Successfully saved"; 
                 string title = "Congrats"; 
                 MessageBox.Show(message, title);
-                //MessageBox.Show("Data Success");
                 RegDetailsList.Add(details);
             }
             else
@@ -80,7 +79,6 @@ namespace windformtasks
                 string message = "Data unSuccessfully";
                 string title = "Warning";
                 MessageBox.Show(message, title);
-                //MessageBox.Show("Data not saved");
             }
         }
         private void but_add_Click(object sender, EventArgs e)
@@ -176,8 +174,6 @@ namespace windformtasks
                     string message = "Invalid  Mobile Number !! Enter valid number!!";                   
                     string title = "Warning";
                     MessageBox.Show(message, title);
-                    //MessageBox.Show("Invalid  Mobile Number!!");
-                    //MessageBox.Show("Enter valid mobile number!!");
                     txt_phone_no.Focus();
                     return false;
                 }

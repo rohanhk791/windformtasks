@@ -30,7 +30,6 @@ namespace windformtasks
                 string message = "successfully deleted";
                 string title = "Congrats";
                 MessageBox.Show(message, title);
-                //MessageBox.Show("successfully deleted");
                 dataGridView1.Rows.Remove(dataGridView1.Rows[id]);                
                 dataGridView1.Refresh();
             }
