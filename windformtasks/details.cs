@@ -29,13 +29,13 @@ namespace windformtasks
                 int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Index);
                 string message = "successfully deleted";
                 string title = "Congrats";
-                MessageBox.Show(message, title);
+                System.Windows.MessageBox.Show(message, title);
                 dataGridView1.Rows.Remove(dataGridView1.Rows[id]);                
                 dataGridView1.Refresh();
             }
             catch (Exception E)
             {
-                MessageBox.Show(E.Message);
+                System.Windows.MessageBox.Show(E.Message);
             }
         }
         public void display()
@@ -55,10 +55,12 @@ namespace windformtasks
             try
             {               
                 dataGridView1.DataSource = regList;
+                dxdatagridview.DataSource = regList;
+                gridControl1.DataSource= regList;
             }
             catch (Exception E)
             {
-                MessageBox.Show(E.Message);
+                System.Windows.MessageBox.Show(E.Message);
             }
         }
         private void label2_Click(object sender, EventArgs e)
@@ -66,16 +68,17 @@ namespace windformtasks
 
         }
 
-        private void btn_edit_Click(object sender, EventArgs e)
+        public void btn_edit_Click(object sender, EventArgs e)
         {
             try
             {
                 regester_copy regForm = new regester_copy();
                 _index = dataGridView1.CurrentCell.RowIndex;
+                //_index = dxdatagridview.CurrentCell.RowIndex;
                 DataGridViewRow edit = dataGridView1.Rows[_index];
                 regForm.numericUpDown1.Text = edit.Cells["id"].Value.ToString();
-                regForm.txt_name.Text = edit.Cells["name"].Value.ToString();                            
-                regForm.num_age.Value = Convert.ToInt32(edit.Cells["age"].Value);               
+                regForm.txt_name.Text = edit.Cells["name"].Value.ToString();
+                regForm.num_age.Value = Convert.ToInt32(edit.Cells["age"].Value);
                 regForm.com_state.Text = edit.Cells["state"].Value.ToString();
                 regForm.com_city.Text = edit.Cells["city"].Value.ToString();
                 regForm.com_country.Text = edit.Cells["country"].Value.ToString();
@@ -83,11 +86,11 @@ namespace windformtasks
                 regForm.txt_address.Text = edit.Cells["address"].Value.ToString();
                 regForm.txt_qualification.Text = edit.Cells["qualification"].Value.ToString();
                 //this.Hide();
-                regForm.Show();                
+                regForm.Show();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                System.Windows.MessageBox.Show(ex.Message);
             }
         }
         private void btn_clear_Click(object sender, EventArgs e)
@@ -97,6 +100,59 @@ namespace windformtasks
         private void dataGridView1_BindingContextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dxbtn_edit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                regester_copy regForm = new regester_copy();
+                _index = dataGridView1.CurrentCell.RowIndex;
+                DataGridViewRow edit = dataGridView1.Rows[_index];
+                regForm.numericUpDown1.Text = edit.Cells["id"].Value.ToString();
+                regForm.txt_name.Text = edit.Cells["name"].Value.ToString();
+                regForm.num_age.Value = Convert.ToInt32(edit.Cells["age"].Value);
+                regForm.com_state.Text = edit.Cells["state"].Value.ToString();
+                regForm.com_city.Text = edit.Cells["city"].Value.ToString();
+                regForm.com_country.Text = edit.Cells["country"].Value.ToString();
+                regForm.txt_phone_no.Text = edit.Cells["phone_no"].Value.ToString();
+                regForm.txt_address.Text = edit.Cells["address"].Value.ToString();
+                regForm.txt_qualification.Text = edit.Cells["qualification"].Value.ToString();
+                //this.Hide();
+                regForm.Show();
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dxbtn_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RegistrationDetails r = new RegistrationDetails();
+                int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Index);
+                string message = "successfully deleted";
+                string title = "Congrats";
+                System.Windows.MessageBox.Show(message, title);
+                dataGridView1.Rows.Remove(dataGridView1.Rows[id]);
+                dataGridView1.Refresh();
+            }
+            catch (Exception E)
+            {
+                System.Windows.MessageBox.Show(E.Message);
+            }
+        }
+
+        private void dxbtn_Addnew_Click(object sender, EventArgs e)
+        {
+            reg.save();
+        }
+
+        private void dxbtn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
